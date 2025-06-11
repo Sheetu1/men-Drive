@@ -38,12 +38,12 @@ router.post(
   }
 );
 
-// GET: Login page
+// GET: Login page....
 router.get('/login', (req, res) => {
   res.render('login');
 });
 
-// POST: Login user
+// POST: Login user...
 router.post(
   '/login',
   body('email').trim().isEmail().isLength({ min: 13 }),
@@ -70,7 +70,7 @@ router.post(
 
     if (!isMatch) {
       return res.status(400).json({
-        message: 'Email or password is incorrect'
+        message: 'Email or Password is Incorrect'
       });
     }
 
